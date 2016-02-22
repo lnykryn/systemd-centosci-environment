@@ -1,6 +1,6 @@
 Name:      systemd-ci-environment
 Version:   0
-Release:   1%{?dist}
+Release:   2%{?dist}
 Summary:   Metapackage for systemd CI
 
 Group:     Development/System
@@ -20,7 +20,7 @@ Requires:  libblkid-devel
 Requires:  xz-devel
 Requires:  bzip2-devel
 Requires:  libidn-devel
-Requires:  libcurl-devel
+Requires:  libcurl-devel >= 7.32.0
 Requires:  kmod-devel
 Requires:  elfutils-devel
 Requires:  libgcrypt-devel
@@ -56,6 +56,8 @@ for building upstream systemd on top of el7.
 %files
 
 %changelog
+* Thu Feb 18 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 0-2
+- bump libcurl version
+
 * Thu Feb 18 2016 Lukáš Nykrýn <lnykryn@redhat.com> - 0-1
 - initial version
-
